@@ -11,7 +11,7 @@ public class Main {
         String partOfString;
 
         Random random = new Random();
-        divisionsAmount = random.nextInt(1, testString.length() - 1); // так как в д.з. не сказано, сколько раз делить, назначаем рандомно. Максимальное количество разделений очевидно на единицу меньше, чем число символов в строке.
+        divisionsAmount = random.nextInt(1, testString.length() - 1); // так как в д.з. не сказано сколько раз делить, назначаем рандомно. Максимальное количество разделений на единицу меньше, чем число символов в строке.
         sizeOfBlock = testString.length() / divisionsAmount; // В соответствии с домашним заданием определяем размер частей произвольно, например разделим строку на произвольные равные части.
 
         System.out.println("Количество делений: " + divisionsAmount);
