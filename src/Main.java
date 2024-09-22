@@ -10,11 +10,6 @@ public class Main {
         int currentIndex;
         String partOfString;
 
-        Random random = new Random();
-        divisionsAmount = random.nextInt(1, testString.length() - 1); // так как в д.з. не сказано сколько раз делить, назначаем рандомно. Максимальное количество разделений на единицу меньше, чем число символов в строке.
-        sizeOfBlock = testString.length() / divisionsAmount; // В соответствии с домашним заданием определяем размер частей произвольно, например разделим строку на произвольные равные части.
-
-        System.out.println("Количество делений: " + divisionsAmount);
 
         if (testString.isEmpty() || testString.contains(" ") || testString.length() == 1) {
             System.out.println("Для разделения строка не должна быть пустой, не должна содержать пробелы, а также должна содержать минимум 2 символа.");
@@ -22,6 +17,11 @@ public class Main {
             System.out.println("Строку " + testString + " можно разделить только пополам: " + testString.charAt(0) + " " + testString.charAt(1));
         } else {
 
+            Random random = new Random();
+            divisionsAmount = random.nextInt(1, testString.length() - 1); // так как в д.з. не сказано сколько раз делить, назначаем рандомно. Максимальное количество разделений на единицу меньше, чем число символов в строке.
+            sizeOfBlock = testString.length() / divisionsAmount; // В соответствии с домашним заданием определяем размер частей произвольно, например разделим строку на произвольные равные части.
+
+            System.out.println("Количество делений: " + divisionsAmount);
 
             //System.out.println("Размер части: " + sizeOfBlock);
             //System.out.println("Остаток: " + testString.length() % divisionsAmount);
